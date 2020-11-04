@@ -1,0 +1,68 @@
+.container {
+width: auto;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+height: 700px;
+border-radius: 10px;
+background-color: #F2F3F4
+}
+
+body {
+  background-color:  #CD6155  ;
+}
+
+h1 {
+  font-family: 'Turret Road', cursive;
+}
+
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 90%;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #D7DBDD#909497;    }
+    49%{    color: #212F3D; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #1C2833;    }
+}
+
+
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Turret Road', cursive;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #F2F3F4;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}

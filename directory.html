@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>JavaScript to do list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="directory.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap');
+</style>
+</head>
+
+<body>
+  <div class = 'container'>
+    <h1 div id = 'header'>Directory<span class = "blinking">_</span></h1>
+<input type="text" id = "myInput" onkeyup = "myFunction()" name="search" placeholder="Search for names..">
+<ul id = "myUL">
+  <li><a href = "#">John<div onclick = message1()><button>Click here for Number</button></li></a>
+    <li><a href = "#">Connie<div onclick = message2()><button>Click here for Number</button></li></a>
+      <li><a href = "#">Brad<div onclick = message3()><button>Click here for Number</button></li></a>
+        <li><a href = "#">Mark<div onclick = message4()><button>Click here for Number</button></li></a>
+          <li><a href = "#">Marla<div onclick = message5()><button>Click here for Number</button></li></a>
+            <li><a href = "#">Matt<div onclick = message6()><button>Click here for Number</button></li></a>
+              <li><a href = "#">Elle<div onclick = message7()><button>Click here for Number</button></li></a>
+                <li><a href = "#">Ronda<div onclick = message8()><button>Click here for Number</button></li></a>
+
+</div>
+</ul>
+<script>
+
+
+function message1(){
+ return alert('269-355-6545');
+}
+function message2() {
+  return alert('269-545-6789');
+}
+function message3() {
+  return alert('269-321-6444');
+}
+function message4() {
+  return alert('269-111-6743');
+}
+function message5() {
+  return alert('269-222-1344');
+}
+function message6() {
+  return alert('269-131-3223');
+}
+function message7() {
+  return alert('269-543-4567');
+}
+function message8() {
+  return alert('269-522-6129');
+}
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+  </div>
+
+
+</body>
+<html>
